@@ -1,5 +1,5 @@
 const { Client, Intents, Collection } = require("discord.js");
-const botConfig = require("./botConfig.json");
+// const botConfig = require("./botConfig.json");
 const fs = require("fs");
 
 const client = new Client({ 
@@ -52,7 +52,7 @@ client.on("messageCreate", async message => {
 
         if (message.author.bot) return;
 
-        var prefix = botConfig.prefix;
+        var prefix = process.env.prefix;
 
         var messageArray = message.content.split(" ");
 
